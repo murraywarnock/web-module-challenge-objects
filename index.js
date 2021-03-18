@@ -250,14 +250,15 @@ function carMaker(miles) {
     /* code here */
     const car = {
       odometer: miles,
-      drive: function(distance) {
+      drive(distance) {
+      // drive: function(distance) {
         return this.odometer + distance;
       },
     }
    return car;  
 }
-// let car1 = carMaker(100);
-// console.log(car1.drive(37));
+// let car1 = carMaker(45687);
+// console.log(car1.drive(100));
 
 /* 🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑 */
 function foo(){
