@@ -214,9 +214,18 @@ Use the getLongReviews function below to do the following:
   ]
 */
 
-function getLongReviews(/* code here */) {
+function getLongReviews(array) {
     /* code here */
+    let retArray = [];
+    for (let i = 0; i < array.length -1; i++) {
+      let wordsArray = array[i].feedback.split(" ");
+      if (wordsArray.length > 15) {
+        retArray.push({name: array[i].name, rating: array[i].rating, feedback:array[i].feedback});
+      }
+    } return retArray;   
   }
+
+  // console.log(getLongReviews(reviews));
   
 
 /* 💪💪💪💪💪💪💪💪💪💪 STRETCH 3: 💪💪💪💪💪💪💪💪💪💪 
@@ -237,11 +246,18 @@ Use the carMaker function below to do the following:
 */
 
 
-function carMaker(/* code here */) {
+function carMaker(miles) {
     /* code here */
-    
+    const car = {
+      odometer: miles,
+      drive: function(distance) {
+        return this.odometer + distance;
+      },
+    }
+   return car;  
 }
-
+// let car1 = carMaker(100);
+// console.log(car1.drive(37));
 
 /* 🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑 */
 function foo(){
